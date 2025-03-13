@@ -54,6 +54,42 @@ This project demonstrates sending Email and SMS from a website using **Serverles
 
 ## Create a Lambda Role
 
+Lambda interacts with SES, SNS, Step Functions which means a Lambda Role must be created with executioon rights for these services.
+
+First, go to **IAM**, and select **Roles** on the left panel, then **Create Role**:
+
+![Create role](https://i.gyazo.com/d21aa5631f3fc70d1ae4efd64b5fe33e.png)
+
+Next, select **AWS service** as the **Trusted entity type** and **Lambda** as the **Use case**:
+
+![Selected trusted entity](https://i.gyazo.com/84998b3835a5460b2c25ea4629a0cab9.png)
+
+Continue and a menu permissions will appear:
+
+![Adding permissions](https://i.gyazo.com/84998b3835a5460b2c25ea4629a0cab9.png)
+
+Now search for the name of each service that will be used, and select *Full Access* rights in order to send instructions and information to the services.
+
+> It is best practice to refine the permissions by using only the rights necessary for the actions you want to do with the services, and to do this you must create our own permissions. Here, to facilitate the execution of the project, the *Full Access* permissions created by default by AWS are used.
+
+Add the *Full Access* permissions of SES:
+
+![SES Permissions](https://i.gyazo.com/add4464f734e5f2bce68547bfe99ced6.png)
+
+Add the *Full Access* permissions of SNS:
+
+![SNS Permissions](https://i.gyazo.com/33ea90095d45f7cb25239c51cf793539.png)
+
+Add the *Full Access* permissions of Step Functions:
+
+![Step functions Permissions](https://i.gyazo.com/95c07c8f32f05844fde7633899fe6f31.png)
+
+Only task left in this section is to validate and create the Lambda Role with the desired name:
+
+![Lambda Role created](https://i.gyazo.com/4fae2e1eee126d9b8f11882f071cd7e0.png)
+
+Once the Lambda Role has been created, it is time to create the first Lambda function: *email.py*.
+
 ---
 
 ## Send Email using SES and Lambda
