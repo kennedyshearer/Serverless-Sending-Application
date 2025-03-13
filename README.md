@@ -58,15 +58,21 @@ Lambda interacts with SES, SNS, Step Functions which means a Lambda Role must be
 
 First, go to **IAM**, and select **Roles** on the left panel, then **Create Role**:
 
-![Create role](https://i.gyazo.com/d21aa5631f3fc70d1ae4efd64b5fe33e.png)
+<p align="center">
+<img width="1200" alt="Create role" src="https://i.gyazo.com/d21aa5631f3fc70d1ae4efd64b5fe33e.png">
+</p>
 
 Next, select **AWS service** as the **Trusted entity type** and **Lambda** as the **Use case**:
 
-![Selected trusted entity](https://i.gyazo.com/84998b3835a5460b2c25ea4629a0cab9.png)
+<p align="center">
+<img width="1200" alt="Selected trusted entity" src="https://i.gyazo.com/f6057281e25431bbd1f2298f010169d8.png">
+</p>
 
 Continue and a menu permissions will appear:
 
-![Adding permissions](https://i.gyazo.com/84998b3835a5460b2c25ea4629a0cab9.png)
+<p align="center">
+<img width="1200" alt="Adding permissions" src="https://i.gyazo.com/84998b3835a5460b2c25ea4629a0cab9.png">
+</p>
 
 Now search for the name of each service that will be used, and select *Full Access* rights in order to send instructions and information to the services.
 
@@ -74,19 +80,27 @@ Now search for the name of each service that will be used, and select *Full Acce
 
 Add the *Full Access* permissions of SES:
 
-![SES Permissions](https://i.gyazo.com/add4464f734e5f2bce68547bfe99ced6.png)
+<p align="center">
+<img width="1200" alt="SES Permissions" src="https://i.gyazo.com/add4464f734e5f2bce68547bfe99ced6.png">
+</p>
 
 Add the *Full Access* permissions of SNS:
 
-![SNS Permissions](https://i.gyazo.com/33ea90095d45f7cb25239c51cf793539.png)
+<p align="center">
+<img width="1200" alt="SNS Permissions" src="https://i.gyazo.com/33ea90095d45f7cb25239c51cf793539.png">
+</p>
 
 Add the *Full Access* permissions of Step Functions:
 
-![Step functions Permissions](https://i.gyazo.com/95c07c8f32f05844fde7633899fe6f31.png)
+<p align="center">
+<img width="1200" alt="Step functions Permissions" src="https://i.gyazo.com/95c07c8f32f05844fde7633899fe6f31.png">
+</p>
 
 Only task left in this section is to validate and create the Lambda Role with the desired name:
 
-![Lambda Role created](https://i.gyazo.com/4fae2e1eee126d9b8f11882f071cd7e0.png)
+<p align="center">
+<img width="1200" alt="Lambda Role created" src="https://i.gyazo.com/4fae2e1eee126d9b8f11882f071cd7e0.png">
+</p>
 
 Once the Lambda Role has been created, it is time to create the first Lambda function: *email.py*.
 
